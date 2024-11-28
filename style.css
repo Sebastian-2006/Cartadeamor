@@ -1,9 +1,11 @@
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ffe6e6;
   margin: 0;
   padding: 0;
 }
+
 
 header {
   background: linear-gradient(90deg, #ff9999, #ff4d4d);
@@ -26,44 +28,55 @@ header .decorative-icon {
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(0);
+      transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+      transform: translateY(-10px);
   }
 }
+
 
 #container {
   text-align: center;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px; 
 }
 
 .button {
   background-color: #ff4d4d;
   color: white;
-  padding: 15px 100px;
+  padding: 15px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 1.2em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: inline-block;
+  text-align: center;
+  min-width: 180px;
+}
+
+
+.button-container .button {
+  min-width: 220px; 
+}
+
+
+#link-container .button {
+  min-width: 180px; 
+  background-color: #ff8080;
+  font-size: 1.1em;
+  padding: 15px 25px;
+  border-radius: 20px;
+  text-decoration: none;
   margin-top: 2em;
 }
 
+
 .button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ff7f7f;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 #loveLetter {
@@ -76,9 +89,7 @@ header .decorative-icon {
   animation: fadeIn 0.5s ease-in-out forwards;
   position: relative;
   max-width: 90%;
-  width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
+  width: 400px;
   margin: 20px auto;
 }
 
@@ -86,15 +97,16 @@ header .decorative-icon {
   color: #ff4d4d;
   font-size: 1.5em;
 }
+
 #loveLetter p {
   color: #333;
   font-size: 1em;
-  margin-top: 2em;
   line-height: 1.6;
   margin: 10px 0;
 }
+
 #loveLetter img {
-  width: 70%;
+  width: 80%;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -111,14 +123,13 @@ header .decorative-icon {
   height: 30px;
   cursor: pointer;
   font-size: 1.2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 
 #Poema {
   margin-top: 30px;
   text-align: center;
+  
 }
 
 video {
@@ -126,281 +137,18 @@ video {
   max-width: 400px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-@media only screen and (max-width: 780px) {
- 
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffe6e6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  header {
-    background: linear-gradient(90deg, #ff9999, #ff4d4d);
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    position: relative;
-  }
-  
-  header h1 {
-    font-size: 2em; 
-    margin: 0;
-  }
-  
-  header .decorative-icon {
-    font-size: 2.5em; 
-    margin-top: 10px;
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
 
-  #container {
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-
-  .button-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px;
-  }
-  
-  .button {
-    background-color: #ff4d4d;
-    color: white;
-    padding: 10px 100px; 
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 90%; 
-    max-width: 350px; 
-    text-align: center;
-  }
-  
-  .button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  #loveLetter {
-    display: none;
-    background: white;
-    border: 2px solid #ffcccc;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.5s ease-in-out forwards;
-    position: relative;
-    max-width: 90%; 
-    width: auto;
-    max-height: 70vh; 
-    overflow-y: auto;
-    margin: 20px auto;
-  }
-  
-  #loveLetter h1 {
-    color: #ff4d4d;
-    font-size: 1.2em; 
-  }
-  
-  #loveLetter p {
-    color: #333;
-    font-size: 20px;
-    margin-top: 10px;
-    line-height: 1.4;
-  }
-  
-  #loveLetter img {
-    width: 70%; 
-    border-radius: 10px;
-    margin-top: 15px;
-  }
-  
-  #closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  #Poema {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  video {
-    width: 200%; 
-    max-width: 500px; 
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  }
-
-@media only screen and (max-width: 400px) {
- 
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffe6e6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  header {
-    background: linear-gradient(90deg, #ff9999, #ff4d4d);
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    position: relative;
-  }
-  
-  header h1 {
-    font-size: 2em; 
-    margin: 0;
-  }
-  
-  header .decorative-icon {
-    font-size: 2.5em; 
-    margin-top: 10px;
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-
-  #container {
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-
-  .button-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px;
-  }
-  
-  .button {
-    background-color: #ff4d4d;
-    color: white;
-    padding: 10px 100px; 
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 90%; 
-    max-width: 350px; 
-    text-align: center;
-  }
-  
-  .button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  #loveLetter {
-    display: none;
-    background: white;
-    border: 2px solid #ffcccc;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.5s ease-in-out forwards;
-    position: relative;
-    max-width: 90%; 
-    width: auto;
-    max-height: 70vh; 
-    overflow-y: auto;
-    margin: 20px auto;
-  }
-  
-  #loveLetter h1 {
-    color: #ff4d4d;
-    font-size: 1.2em; 
-  }
-  
-  #loveLetter p {
-    color: #333;
-    font-size: 20px;
-    margin-top: 10px;
-    line-height: 1.4;
-  }
-  
-  #loveLetter img {
-    width: 70%; 
-    border-radius: 10px;
-    margin-top: 15px;
-  }
-  
-  #closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  #Poema {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  video {
-    width: 200%; 
-    max-width: 500px; 
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  }
 }
 
+
+@media (max-width: 768px) {
+  .button-container, #link-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .button-container .button, #link-container .button {
+      width: 70%;
+      margin: 10px 0;
+  }
+}
