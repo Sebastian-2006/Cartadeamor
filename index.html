@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Princesa</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" href="coraazon.png">
+    <link rel="icon" href="coraazon.png">
 </head>
 <body>
     <header>
@@ -14,18 +14,18 @@
     </header>
 
     <div id="container">
-        
+        <!-- Botones principales -->
         <div class="button-container">
             <button class="button" id="openButton">Abrir Carta de Amor</button>
             <button class="button" onclick="alert('¡Te envío todo mi amor!')">Enviar Besitos 💋</button>
         </div>
 
-      
+        <!-- Botón de enlace -->
         <div id="link-container">
             <a href="https://www.youtube.com/watch?v=KZh60U1PqSE" target="_blank" class="button">Canción de amor ✨</a>
         </div>
 
-        
+        <!-- Carta -->
         <div id="loveLetter">
             <button id="closeButton">&times;</button>
             <h1>PARA MI PRINCESA</h1>
@@ -39,9 +39,12 @@
             <p>Siempre tuyo</p>
             <p>De tu príncipe</p>
         </div>
+
+        <!-- Contenedor de corazones flotantes -->
+        <div id="heartsContainer"></div>
     </div>
 
- 
+    <!-- Videos -->
     <div id="Poema">
         <video controls>
             <source src="ssstik.io_@osoperez.33_1732374005553.mp4" type="video/mp4">
@@ -59,14 +62,32 @@
         const openButton = document.getElementById('openButton');
         const closeButton = document.getElementById('closeButton');
         const loveLetter = document.getElementById('loveLetter');
+        const heartsContainer = document.getElementById('heartsContainer');
 
         openButton.addEventListener('click', () => {
             loveLetter.style.display = 'block';
+            createHearts();
         });
 
         closeButton.addEventListener('click', () => {
             loveLetter.style.display = 'none';
+            heartsContainer.innerHTML = ''; // Limpiar corazones al cerrar
         });
+
+        function createHearts() {
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                heartsContainer.appendChild(heart);
+
+                // Eliminar corazones después de que la animación termine
+                setTimeout(() => {
+                    heart.remove();
+                }, 4000);
+            }
+        }
     </script>
 </body>
 </html>
