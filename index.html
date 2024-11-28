@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi princesa</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenida Mi Amor</h1>
+      <div class="decorative-icon">❤️</div>
+    </header>
+  
+    <div id="container">
+      
+      <div class="button-container">
+        <button class="button" id="openButton">Abrir Carta de Amor</button>
+        <button class="button" onclick="alert('¡Te envío todo mi amor!')">Enviar Besitos 💋</button>
+      </div>
+  
+
+      <a href="https://www.youtube.com/watch?v=KZh60U1PqSE" target="_blank" class="button">Canción de amor ✨</a>
+  
+      <div id="loveLetter">
+        <button id="closeButton">&times;</button>
+        <h1>PARA MI PRINCESA</h1>
+        <img src="IMG_20241101_165202_559.webp" alt="Imagen de amor">
+        <p>
+          MI VIDA<br>
+          
+          Solo quiero que sepas que te pienso constantemente y que cada momento contigo es un regalo que atesoro profundamente.<br>Eres mi paz en medio del caos, mi alegría en los días grises. No necesito mucho más que tu sonrisa y tu abrazo para sentirme completo.<br>
+          
+          Te amo con todo mi corazón, más de lo que las palabras pueden decir.</p>
+          
+          <p>Siempre tuyo</p>
+
+          <p>De tu principe </p>
+      </div>
+    </div>
+  
+    <div id="Poema">
+      <video controls>
+        <source src="ssstik.io_@osoperez.33_1732374005553.mp4" type="video/mp4">
+        <source src="ssstik.io_@osoperez.33_1732374005553.mp4" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+      <video controls>
+        <source src="Video.mp4" type="video/mp4">
+        <source src="Video.mp4" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  
+    <script>
+      const openButton = document.getElementById('openButton');
+      const closeButton = document.getElementById('closeButton');
+      const loveLetter = document.getElementById('loveLetter');
+  
+      openButton.addEventListener('click', () => {
+        loveLetter.style.display = 'block';
+      });
+  
+      closeButton.addEventListener('click', () => {
+        loveLetter.style.display = 'none';
+      });
+    </script>
+  </body>
+  </html>
